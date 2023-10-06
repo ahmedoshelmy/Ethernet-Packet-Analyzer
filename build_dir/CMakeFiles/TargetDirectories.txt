@@ -1,0 +1,3 @@
+/workspaces/Ethernet-Packet-Analyzer/build_dir/CMakeFiles/PacketAnaluzer.dir
+/workspaces/Ethernet-Packet-Analyzer/build_dir/CMakeFiles/edit_cache.dir
+/workspaces/Ethernet-Packet-Analyzer/build_dir/CMakeFiles/rebuild_cache.dir
