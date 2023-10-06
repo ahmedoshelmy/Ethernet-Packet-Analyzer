@@ -4,14 +4,14 @@
 
 EthernetPacketParser::EthernetPacketParser(int sz)
 {
-    this->generic_m = {
+    generic_m = {
         {"preamble", {0, 16}},
         {"destination_address", {16, 12}},
         {"source_address", {28, 12}},
         {"type", {40, 4}},
         {"payload", {44, (sz -8 - 44)}},
         {"CRC", {sz-8, 8}}};
-    this->ecpri_payload_m= {
+    ecpri_payload_m= {
         {"protocol_ver", {0, 1}},
         {"concat_indicator", {1, 1}},
         {"msg_type",{2,2}},
