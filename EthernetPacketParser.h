@@ -4,12 +4,13 @@
 
 
 #include "EthernetPacket.h"
+#include "EcpriEthernetPacket.h"
 
 class EthernetPacketParser {
 public:
     EthernetPacketParser() ;
-    void parseEthernetPacket (EthernetPacket EthernetPacketInstance );
-    void parseEcpriPacket (EthernetPacket EthernetPacketInstance );
+    void parseEthernetPacket (EthernetPacket & EthernetPacketInstance );
+    void parseEcpriPacket (EcpriEthernetPacket EthernetPacketInstance );
 
 };
 
