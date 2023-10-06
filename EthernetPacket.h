@@ -2,10 +2,12 @@
 #ifndef PACKETANALUZER_ETHERNETPACKET_H
 #define PACKETANALUZER_ETHERNETPACKET_H
 
-#include <bits/stdc++.h>
+#include"pch.h"
+
+class EthernetPacketParser;
 
 class EthernetPacket {
-private:
+protected:
     std::string raw_data;
     std::string preamble;
     std::string source_address;
@@ -14,20 +16,17 @@ private:
     std::string payload;
     std::string crc;
 public:
-    std::string getRawData() ;
-    std::string getPreamble() ;
-    std::string getSourceAddress() ;
-    std::string getDestinationAddress() ;
-    std::string getType() ;
-    std::string getPayload() ;
-    std::string getCrc() ;
-    void setRawData(std::string) ;
-    void setPreamble(std::string) ;
-    void setSourceAddress(std::string) ;
-    void setDestinationAddress(std::string) ;
-    void setType(std::string) ;
-    void setPayload(std::string) ;
-    void setCrc(std::string) ;
+    std::string getRawData() const { return preamble; }
+    std::string getPremable() const { return preamble; }
+    std::string getSourceAddress() const { return source_address; }
+    std::string getDestinationAddress() const { return destination_address; }
+    std::string getType() const { return type; }
+    std::string getPayload() const { return payload; }
+    std::string getCrc() const { return crc; }
+
+
+    friend EthernetPacketParser;
+
 
 
 
