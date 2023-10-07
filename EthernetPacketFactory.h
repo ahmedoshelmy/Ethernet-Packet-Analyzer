@@ -16,8 +16,8 @@ public:
     EthernetPacketFactory() ;
 private:
    int packetCount ;
-   std::vector<std::string> EthernetPacketsStrings ;
-   std::vector<EthernetPacket *> EthernetPackets ;
+   std::vector<std::string> EthernetPacketsStrings ; // Raw data of the ethernet packets
+   std::vector<EthernetPacket *> EthernetPackets ; // Ethernet packets after parsing
 
 };
 
