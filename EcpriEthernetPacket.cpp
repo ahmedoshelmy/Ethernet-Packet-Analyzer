@@ -30,22 +30,39 @@ EcpriEthernetPacket::EcpriEthernetPacket(std::string data) : EthernetPacket(data
 }
 
 void EcpriEthernetPacket::logPacket(){
-    std::cout<<this->raw_data<<std::endl;
-    std::cout<<"CRC:"<<this->crc<<std::endl;
 
-    std::cout<<"Concatenation Indicator:"<<this->concat_indicator<<std::endl;
-    std::cout<<"Destination Address:"<<this->destination_address<<std::endl;
+    std::ofstream outputFile;
 
-    std::cout<<"Message Type:"<<this->msg_type<<std::endl;
-    std::cout<<"Payload Size:"<<this->payload_sz<<std::endl;
-    std::cout<<"Protocol Version:"<<this->protocol_ver<<std::endl;
+    std::string outputFileName = "output_packets" ;
+
+    std::string file_path = __FILE__;
+    std::string dir_path = file_path.substr(0, file_path.rfind('/')); // This contains the current directory of the source file
+
+    outputFile.open(dir_path + "\\" + outputFileName, std::ios::app) ;
+
+    if (!outputFile.is_open()) {
+        std::cerr << "Unable to open the output file." << std::endl;
+        return;
+    }
+
+    outputFile<<this->raw_data<<std::endl;
+    outputFile<<"CRC:"<<this->crc<<std::endl;
+
+    outputFile<<"Concatenation Indicator:"<<this->concat_indicator<<std::endl;
+    outputFile<<"Destination Address:"<<this->destination_address<<std::endl;
+
+    outputFile<<"Message Type:"<<this->msg_type<<std::endl;
+    outputFile<<"Payload Size:"<<this->payload_sz<<std::endl;
+    outputFile<<"Protocol Version:"<<this->protocol_ver<<std::endl;
 
 
-    std::cout<<"RTC ID:"<<this->rtc_id<<std::endl;
-    std::cout<<"Sequence ID:"<<this->seq_id<<std::endl;
+    outputFile<<"RTC ID:"<<this->rtc_id<<std::endl;
+    outputFile<<"Sequence ID:"<<this->seq_id<<std::endl;
 
 
-    std::cout<<"Source Address:"<<this->source_address<<std::endl;
-    std::cout<<"Type:"<<this->type<<std::endl;
+    outputFile<<"Source Address:"<<this->source_address<<std::endl;
+    outputFile<<"Type:"<<this->type<<std::endl;
+
+    outputFile.close();
 
 }
