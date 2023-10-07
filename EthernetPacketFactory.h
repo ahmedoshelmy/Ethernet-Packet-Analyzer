@@ -7,13 +7,18 @@
 
 
 
+
 class EthernetPacketFactory {
 public:
     void readPackets(std::string) ;
     void parsePackets() ;
+    void logPackets() ;
     EthernetPacketFactory() ;
 private:
-   std::vector<std::string> EthernetPackets ;
+   int packetCount ;
+   std::vector<std::string> EthernetPacketsStrings ;
+   std::vector<EthernetPacket *> EthernetPackets ;
+
 };
 
 

@@ -6,6 +6,8 @@ int main() {
     EthernetPacketFactory EthernetPacketFactoryInstance  ;
     std::string fileName = "input_packets" ;
     EthernetPacketFactoryInstance.readPackets(fileName);
-    std::cout << "Hello, World!" << std::endl;
+    EthernetPacketFactoryInstance.parsePackets() ;
+    EthernetPacketFactoryInstance.logPackets();
+
     return 0;
 }

@@ -6,16 +6,20 @@
 
 #include "EthernetPacket.h"
 
-class EthernetPacketParser;
+
+
 
 class EcpriEthernetPacket : public EthernetPacket{
 private:
+
     std::string protocol_ver;
     std::string concat_indicator;
     std::string msg_type;
     std::string payload_sz;
     std::string rtc_id;
     std::string seq_id;
+    void parsePacket() ;
+    void logPacket() ;
 
 public:
 
@@ -26,7 +30,7 @@ public:
     std::string getrtcId() const { return rtc_id; }
     std::string getseqId() const { return seq_id; }
 
-    friend EthernetPacketParser;
+    explicit EcpriEthernetPacket(std::string);
 };
 
 

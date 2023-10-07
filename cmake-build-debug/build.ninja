@@ -63,13 +63,6 @@ build CMakeFiles/PacketAnaluzer.dir/EthernetPacket.cpp.obj: CXX_COMPILER__Packet
   OBJECT_DIR = CMakeFiles\PacketAnaluzer.dir
   OBJECT_FILE_DIR = CMakeFiles\PacketAnaluzer.dir
 
-build CMakeFiles/PacketAnaluzer.dir/EthernetPacketParser.cpp.obj: CXX_COMPILER__PacketAnaluzer_Debug C$:/Users/Dell/CLionProjects/PacketAnaluzer/EthernetPacketParser.cpp || cmake_object_order_depends_target_PacketAnaluzer
-  DEP_FILE = CMakeFiles\PacketAnaluzer.dir\EthernetPacketParser.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
-  INCLUDES = -IC:/Users/Dell/CLionProjects/PacketAnaluzer
-  OBJECT_DIR = CMakeFiles\PacketAnaluzer.dir
-  OBJECT_FILE_DIR = CMakeFiles\PacketAnaluzer.dir
-
 build CMakeFiles/PacketAnaluzer.dir/EcpriEthernetPacket.cpp.obj: CXX_COMPILER__PacketAnaluzer_Debug C$:/Users/Dell/CLionProjects/PacketAnaluzer/EcpriEthernetPacket.cpp || cmake_object_order_depends_target_PacketAnaluzer
   DEP_FILE = CMakeFiles\PacketAnaluzer.dir\EcpriEthernetPacket.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++20
@@ -92,7 +85,7 @@ build CMakeFiles/PacketAnaluzer.dir/EthernetPacketFactory.cpp.obj: CXX_COMPILER_
 #############################################
 # Link the executable PacketAnaluzer.exe
 
-build PacketAnaluzer.exe: CXX_EXECUTABLE_LINKER__PacketAnaluzer_Debug CMakeFiles/PacketAnaluzer.dir/main.cpp.obj CMakeFiles/PacketAnaluzer.dir/EthernetPacket.cpp.obj CMakeFiles/PacketAnaluzer.dir/EthernetPacketParser.cpp.obj CMakeFiles/PacketAnaluzer.dir/EcpriEthernetPacket.cpp.obj CMakeFiles/PacketAnaluzer.dir/EthernetPacketFactory.cpp.obj
+build PacketAnaluzer.exe: CXX_EXECUTABLE_LINKER__PacketAnaluzer_Debug CMakeFiles/PacketAnaluzer.dir/main.cpp.obj CMakeFiles/PacketAnaluzer.dir/EthernetPacket.cpp.obj CMakeFiles/PacketAnaluzer.dir/EcpriEthernetPacket.cpp.obj CMakeFiles/PacketAnaluzer.dir/EthernetPacketFactory.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PacketAnaluzer.dir

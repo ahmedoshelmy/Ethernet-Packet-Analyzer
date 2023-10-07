@@ -4,6 +4,13 @@
 
 #include"pch.h"
 
+
+struct packet_parse_pos{
+    int start;
+    int sz;
+};
+
+
 class EthernetPacketParser;
 
 class EthernetPacket {
@@ -15,20 +22,13 @@ protected:
     std::string type;
     std::string payload;
     std::string crc;
+    int sz ;
+    void parsePacket() ;
 public:
-    std::string getRawData() const { return preamble; }
-    std::string getPremable() const { return preamble; }
-    std::string getSourceAddress() const { return source_address; }
-    std::string getDestinationAddress() const { return destination_address; }
-    std::string getType() const { return type; }
-    std::string getPayload() const { return payload; }
-    std::string getCrc() const { return crc; }
 
+    virtual void logPacket() ;
 
-    friend EthernetPacketParser;
-
-
-
+    explicit EthernetPacket(std::string) ;
 
 };
 
